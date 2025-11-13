@@ -1,10 +1,10 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Login from "../pages/Login";
-import Signup from "../pages/Signup";
-import Forgot from "../pages/Forgot";
-import Verify from "../pages/Verify";
-import SetPassword from "../pages/SetPassword";
+import Login from "../pages/Login.jsx";
+import Signup from "../pages/Signup.jsx";
+import Forgot from "../pages/Forgot.jsx";
+import Verify from "../pages/Verify.jsx";
+import SetPassword from "../pages/SetPassword.jsx";
 
 export default function AppRoutes() {
   return (
@@ -15,7 +15,14 @@ export default function AppRoutes() {
       <Route path="/forgot" element={<Forgot />} />
       <Route path="/verify" element={<Verify />} />
       <Route path="/setpassword" element={<SetPassword />} />
-      <Route path="*" element={<div className="p-6">Page not found</div>} />
+      <Route
+        path="*"
+        element={
+          <div className="p-8 text-center text-red-500">
+            404 | Page not found
+          </div>
+        }
+      />
     </Routes>
   );
 }

@@ -1,14 +1,10 @@
 import React, { useEffect } from "react";
-import { Routes, Route, Navigate, useLocation, Link } from "react-router-dom";
-import Login from "./pages/Login.jsx";
-import Signup from "./pages/Signup.jsx";
-import Forgot from "./pages/Forgot.jsx";
-import Verify from "./pages/Verify.jsx";
-import SetPassword from "./pages/SetPassword.jsx";
+import { useLocation, Link } from "react-router-dom";
 import { useToast } from "./utils/context.jsx";
 import LoginImg from "./assets/LoginImg.png";
 import SignupImg from "./assets/SignupImg.png";
 import ForgotImg from "./assets/ForgotImg.png";
+import AppRoutes from "./routes/AppRoutes.jsx";
 
 const IMAGE_MAP = {
   "/login": LoginImg,
@@ -50,22 +46,7 @@ export default function App() {
             </div>
 
             <div className="p-6 md:p-8 border-gray-100 min-h-[400px] flex items-center justify-center">
-              <Routes>
-                <Route path="/" element={<Navigate to="/login" replace />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<Signup />} />
-                <Route path="/forgot" element={<Forgot />} />
-                <Route path="/verify" element={<Verify />} />
-                <Route path="/setpassword" element={<SetPassword />} />
-                <Route
-                  path="*"
-                  element={
-                    <div className="p-8 text-center text-red-500">
-                      404 | Page not found
-                    </div>
-                  }
-                />
-              </Routes>
+              <AppRoutes />
             </div>
           </div>
           <div className="hidden lg:flex w-full order-1 lg:order-2 justify-center items-center p-4 mt-30">
