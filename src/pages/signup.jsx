@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Label from '../components/Label';
-import TextInput from '../components/TextInput';
-import PasswordInput from '../components/PasswordInput';
-import PrimaryButton from '../components/PrimaryButton';
-import OAuthButtons from '../components/OAuthButtons';
-import { passwordStrength, emailRegex } from '../utils/validators';
+import Label from '../components/Label.jsx';
+import TextInput from '../components/TextInput.jsx';
+import PasswordInput from '../components/PasswordInput.jsx';
+import PrimaryButton from '../components/PrimaryButton.jsx';
+import OAuthButtons from '../components/OAuthButtons.jsx';
+import { passwordStrength, emailRegex } from '../utils/validators.js';
 import { useToast } from '../utils/context.jsx';
 
 export default function Signup() {
