@@ -1,16 +1,100 @@
-# React + Vite
+# 🛡️ Secure Auth Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and professional authentication portal built as part of the **Software Engineer Technical Assessment**.  
+This project implements complete authentication flows with clean UI/UX, modular React components, and Tailwind CSS styling.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 **Project Overview**
 
-## React Compiler
+This web application demonstrates essential authentication flows:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Login**
+- **Sign-Up / Registration**
+- **Forgot Password**
+- **Verification Code**
+- **Set New Password**
 
-## Expanding the ESLint configuration
+The project prioritizes responsiveness, component reusability, clean code structure, and UI consistency inspired by the Figma reference provided during the assessment.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ **Key Features & Assessment Deliverables**
+
+| Evaluation Criteria                       | Implementation                | Technical Detail                                                                                                                 |
+| ----------------------------------------- | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| **UI/UX Design Quality & Responsiveness** | Modern Adaptive Layout        | Tailwind responsive utilities (`sm:`, `md:`, `lg:`). Fully responsive two-column layout on desktop and stacked layout on mobile. |
+| **Code Quality & Structure**              | Component-Based Architecture  | Reusable components: `TextInput`, `PasswordInput`, `PrimaryButton`, `OAuthButton`, etc. Clean separation of concerns.            |
+| **Validation & Functionality**            | Robust Client-Side Validation | - Email Regex Validation<br>- Strong Password Rules (min 8 chars, uppercase, number)<br>- Confirm Password Match                 |
+| **Creativity & Attention to Detail**      | Custom Toast Modal System     | Replaces all native alerts with beautiful, theme‑consistent toast notifications.                                                 |
+| **Complete Flow Coverage**                | Simulated Backend             | Uses `localStorage` to simulate auth state, verification codes, and password reset flow.                                         |
+
+---
+
+## 🛠️ **Tech Stack**
+
+- **React** (Functional Components, Hooks)
+- **Tailwind CSS** (Utility-first responsive design)
+- **React Router**
+- **Lucide Icons** (Clean, scalable icons)
+- **LocalStorage** (Simulated backend behavior)
+
+---
+
+## 📂 **Code Structure & Major Components**
+
+| Component                        | Description                                                                      |
+| -------------------------------- | -------------------------------------------------------------------------------- |
+| **App.jsx**                      | Main entry point managing routing, UI layout, state, and right-side image panel. |
+| **useInternalRouter**            | Custom hook simulating navigation logic similar to React Router.                 |
+| **MessageModal / ToastProvider** | Custom modal/notification system for cleaner UX.                                 |
+| **LoginPage.jsx**                | Handles email/password login with validation.                                    |
+| **SignupPage.jsx**               | Multi-field registration with strong password policy.                            |
+| **ForgotPasswordPage.jsx**       | Captures email to initiate password reset.                                       |
+| **VerifyCodePage.jsx**           | 6‑digit code input & validation.                                                 |
+| **SetNewPasswordPage.jsx**       | User sets new password after successful verification.                            |
+
+---
+
+## ⚙️ **Installation & Local Setup**
+
+### **1️⃣ Clone the Repository**
+
+```bash
+git clone https://github.com/AbhinavRai24/login-and-signup-webapp
+cd login-and-signup-webapp
+```
+
+### **2️⃣ Install Dependencies**
+
+```bash
+npm install
+```
+
+### **3️⃣ Run Application (Development Mode)**
+
+```bash
+npm run dev
+```
+
+Access it at the URL Vite provides (usually):
+
+```
+http://localhost:5173/
+```
+
+### **4️⃣ Build for Production**
+
+```bash
+npm run build
+```
+
+---
+
+## 🧠 **What This Project Demonstrates**
+
+- Strong UI/UX implementation skills
+- Clean code and reusable component architecture
+- Ability to convert Figma/UI references into responsive React layouts
+- Understanding of authentication flow logic
+- Attention to detail and polished user experience
